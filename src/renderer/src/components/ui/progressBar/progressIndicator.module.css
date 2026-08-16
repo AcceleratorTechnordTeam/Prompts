@@ -1,0 +1,32 @@
+.Container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 18px;
+}
+
+.Label,
+.Value {
+  width: fit-content;
+  min-width: 70px;
+  height: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.875rem;
+  color: var(--black);
+  opacity: 0.05;
+  transition: opacity 0.8s ease-in-out;
+}
+
+.Label {
+  width: fit-content;
+  min-width: 190px;
+  padding: 0 4px;
+}
+
+.Container[data-is-model-running='True'] .Label,
+.Container[data-is-model-running='True'] .Value {
+  opacity: 1;
+}

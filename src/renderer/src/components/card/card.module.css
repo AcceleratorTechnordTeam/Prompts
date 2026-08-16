@@ -1,0 +1,20 @@
+.card {
+  background: var(--background);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-blur);
+  padding: 8px;
+}
+
+.top {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 0 6px 6px;
+}
+
+.label {
+  font-size: 1rem;
+  color: var(--forground);
+}

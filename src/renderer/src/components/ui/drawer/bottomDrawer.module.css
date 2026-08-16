@@ -1,0 +1,124 @@
+/* index.module.css */
+
+.Backdrop {
+  position: fixed;
+  inset: 0;
+  background-color: rgb(0 0 0 / 0.4);
+  animation: fadeIn 150ms ease-out;
+}
+
+.Backdrop[data-ending-style] {
+  animation: fadeOut 150ms ease-in;
+}
+
+.Viewport {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+
+.Popup {
+  min-width: 440px;
+  max-width: 440px;
+  max-height: 60vh;
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 20px 60px rgb(0 0 0 / 0.2);
+  outline: none;
+  overflow: hidden;
+  animation: scaleIn 180ms ease-out;
+}
+
+.Popup[data-ending-style] {
+  animation: scaleOut 150ms ease-in;
+}
+
+.Content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 24px;
+  overflow-y: auto;
+}
+
+.Title {
+  margin: 0;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #111;
+}
+
+.Description {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.Children {
+  margin-top: 1rem;
+}
+
+.Actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 16px;
+}
+
+.Button {
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #111;
+  background-color: #f2f2f2;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 120ms ease;
+}
+
+.Button:hover {
+  background-color: #e5e5e5;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes scaleOut {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+}

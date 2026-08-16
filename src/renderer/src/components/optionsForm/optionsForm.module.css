@@ -1,0 +1,31 @@
+/* optionsForm.module.css */
+.form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.fields {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.button {
+  margin-top: 1rem;
+  padding: 8px 32px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--foreground);
+  background-color: var(--segondary);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 120ms ease;
+}
+.button:hover {
+  background-color: var(--accent);
+}

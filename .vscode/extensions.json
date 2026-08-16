@@ -1,0 +1,25 @@
+{
+	"recommendations": [
+		// General
+		"shd101wyy.markdown-preview-enhanced",
+		"aaron-bond.better-comments",
+		"dracula-theme.theme-dracula",
+		"dbaeumer.vscode-eslint",
+		"ms-ceintl.vscode-language-pack-fr",
+		"pkief.material-icon-theme",
+		"mddanishyusuf.iconbuddy-vs-code-plugin",
+		"wix.vscode-import-cost",
+		"ritwickdey.liveserver",
+		"johnpapa.vscode-peacock",
+		"esbenp.prettier-vscode",
+		"formulahendry.auto-rename-tag",
+		"christian-kohler.path-intellisense",
+		"ms-vscode.vscode-typescript-next",
+		"anysphere.remote-wsl",
+		// Python
+		"ms-python.python",
+		"ms-python.vscode-pylance",
+		"ms-python.black-formatter",
+		"charliermarsh.ruff"
+	]
+}

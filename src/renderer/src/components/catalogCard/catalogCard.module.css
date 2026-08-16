@@ -1,0 +1,153 @@
+.container {
+  width: 270px;
+  min-height: 260px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding: 12px 12px 12px 14px;
+  border-radius: 20px;
+  background: var(--segondary);
+  box-shadow: var(--shadow-blur);
+}
+
+.container[data-is-installed='true'] {
+  background: var(--background);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.family {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: var(--text-muted, #999);
+  letter-spacing: 0.05em;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+}
+
+.weight,
+.size {
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: var(--text-muted, #666);
+  background: color-mix(in srgb, var(--foreground) 8%, transparent);
+  padding: 3px 8px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-grow: 1;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.label {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.description {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin: 0;
+  text-align: justify;
+}
+
+.capabilities {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin: auto 0;
+}
+
+.capability {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.7rem;
+  color: var(--text-muted, #666);
+  background: color-mix(in srgb, var(--foreground) 6%, transparent);
+  padding: 3px 8px;
+  border-radius: 8px;
+}
+
+.capIcon {
+  font-size: 0.8rem;
+  line-height: 1;
+}
+
+.footer {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.button {
+  align-self: flex-start;
+  padding: 8px 12px;
+  border-radius: 12px;
+  border: none;
+  font-size: 0.88rem;
+  background-color: var(--foreground);
+  color: var(--background);
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.button:hover {
+  background: var(--accent);
+}
+
+.button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  background-color: var(--foreground);
+}
+
+.button:disabled:hover {
+  background-color: var(--foreground);
+}
+
+.setting {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition:
+    color 0.3s ease-in-out,
+    transform 0.3s ease-in-out;
+}
+
+.setting:hover {
+  transform: rotate(90deg);
+  color: var(--accent);
+}
+
+.loader {
+  animation: spin 1s linear infinite;
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

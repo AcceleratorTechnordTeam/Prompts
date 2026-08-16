@@ -1,0 +1,82 @@
+{
+	"Console Log": {
+		"scope": "javascript,javascriptreact,typescript,typescriptreact",
+		"prefix": "lo",
+		"body": ["console.log($1);"],
+		"description": "Console log statement"
+	},
+	"React useState": {
+		"scope": "javascript,javascriptreact,typescript,typescriptreact",
+		"prefix": "rust",
+		"body": ["const [$1, set${1/(.*)/${1:/capitalize}/}] = useState($2);"],
+		"description": "React useState hook"
+	},
+	"React useEffect": {
+		"scope": "javascript,javascriptreact,typescript,typescriptreact",
+		"prefix": "ruet",
+		"body": ["useEffect(() => {", "  $1", "}, [$2]);"],
+		"description": "React useEffect hook"
+	},
+	"React useMemo": {
+		"scope": "javascript,javascriptreact,typescript,typescriptreact",
+		"prefix": "rumo",
+		"body": [
+			"const $1 = useMemo(() => {",
+			"  $2",
+			"  return $3;",
+			"}, [$4]);"
+		],
+		"description": "React useMemo hook"
+	},
+	"React className": {
+		"scope": "javascript,javascriptreact,typescript,typescriptreact",
+		"prefix": "cla",
+		"body": ["className={styles.$1}"],
+		"description": "CSS Module className"
+	},
+	"React Function Component": {
+		"scope": "javascript,javascriptreact,typescript,typescriptreact",
+		"prefix": "rafcs",
+		"body": [
+			"// React core",
+			"import React, { useState, useEffect } from 'react';",
+			"// External modules / Third-party libraries",
+			"// Local components",
+			"// Hooks and utilities",
+			"// Configuration",
+			"// Styles",
+			"import styles from './${TM_FILENAME_BASE}.module.css';",
+			"",
+			"type ${TM_FILENAME_BASE}Props = {",
+			"  $1",
+			"};",
+			"",
+			"export const ${TM_FILENAME_BASE}: React.FC<${TM_FILENAME_BASE}Props> = ({ $2 }) => {",
+			"  $3",
+			"  return (",
+			"    <div className={styles.container}>",
+			"      $4",
+			"    </div>",
+			"  );",
+			"};"
+		],
+		"description": "Full React FC with imports and styling"
+	},
+	"Simple React Function Component": {
+		"scope": "javascript,javascriptreact,typescript,typescriptreact",
+		"prefix": "rafc",
+		"body": [
+			"type ${TM_FILENAME_BASE}Props = {",
+			"  $1",
+			"};",
+			"",
+			"export const ${TM_FILENAME_BASE} = ({ $2 }: ${TM_FILENAME_BASE}Props) => {",
+			"  $3",
+			"  return (",
+			"    <div>$4</div>",
+			"  );",
+			"};"
+		],
+		"description": "Simple React FC with props"
+	}
+}

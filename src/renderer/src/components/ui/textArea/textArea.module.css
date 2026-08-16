@@ -1,0 +1,63 @@
+.Field {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 0.375rem;
+  width: 100%;
+}
+
+.Label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--foreground);
+  font-family: inherit;
+}
+
+.Required {
+  color: var(--destructive-foreground);
+  margin-left: 0.25rem;
+}
+
+.TextArea {
+  field-sizing: content;
+  width: 100%;
+  min-height: 190px;
+  resize: none;
+  padding: 0.38rem 0.5rem;
+  font-family: inherit;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  border-radius: var(--radius);
+
+  background-color: var(--primary);
+  color: var(--foreground);
+  border: none;
+  transition:
+    border-color 0.15s,
+    box-shadow 0.15s;
+
+  &::placeholder {
+    color: var(--muted-foreground);
+  }
+
+  &:focus {
+    outline: none;
+    border-color: var(--ring);
+  }
+
+  &:focus-within {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 1px color-mix(in oklch, var(--primary), transparent);
+  }
+}
+
+.Error {
+  font-size: 0.8125rem;
+  color: var(--danger);
+}
+
+.Description {
+  font-size: 0.8rem;
+  margin-left: 6px;
+  color: var(--danger);
+}

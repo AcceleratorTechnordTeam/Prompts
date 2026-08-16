@@ -1,0 +1,428 @@
+{
+	// ================================
+	// 🔧 EDITOR BEHAVIOR
+	// ================================
+	"editor.formatOnSave": true,
+	"editor.formatOnPaste": true,
+	"editor.linkedEditing": true,
+	"editor.suggest.insertMode": "replace",
+	"editor.acceptSuggestionOnCommitCharacter": false,
+	"editor.codeActionsOnSave": {
+		"source.organizeImports": "explicit",
+		"source.fixAll.eslint": "explicit",
+		"source.fixAll": "explicit"
+	},
+	"editor.snippetSuggestions": "top",
+	"editor.quickSuggestions": {
+		"other": "on",
+		"comments": "on",
+		"strings": "on"
+	},
+	"editor.tabCompletion": "on",
+	"editor.inlineSuggest.enabled": true,
+
+	// ================================
+	// 🎨 EDITOR APPEARANCE & FONT
+	// ================================
+	"editor.minimap.enabled": false,
+	"editor.renderWhitespace": "trailing",
+	"editor.fontFamily": "'Monaspace Neon'",
+	"editor.fontLigatures": "'calt', 'liga', 'dlig', 'ss01', 'ss02', 'ss03', 'ss04'",
+	"editor.fontWeight": "300",
+	"editor.fontSize": 14,
+	"editor.lineHeight": 1.6,
+	"terminal.integrated.fontFamily": "monospace",
+	"workbench.colorTheme": "Dracula Theme Soft",
+	"workbench.iconTheme": "material-icon-theme",
+
+	// ================================
+	// 📝 LANGUAGE FORMATTERS
+	// ================================
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"eslint.format.enable": true,
+
+	// React/TypeScript/JavaScript
+	"[javascript]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode",
+		"editor.tabSize": 2
+	},
+	"[javascriptreact]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode",
+		"editor.tabSize": 2
+	},
+	"[typescript]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode",
+		"editor.tabSize": 2
+	},
+	"[typescriptreact]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode",
+		"editor.tabSize": 2
+	},
+	"[json]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode",
+		"editor.tabSize": 2
+	},
+	"[jsonc]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode",
+		"editor.tabSize": 2
+	},
+	"[css]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode",
+		"editor.tabSize": 2
+	},
+	"[html]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode",
+		"editor.tabSize": 2
+	},
+	"[python]": {
+		"editor.formatOnSave": true,
+		"editor.defaultFormatter": "ms-python.black-formatter",
+		"editor.codeActionsOnSave": {
+			"source.fixAll": "explicit",
+			"source.organizeImports": "explicit"
+		}
+	},
+
+	// ================================
+	// 🎯 PRETTIER CONFIGURATION
+	// ================================
+	"prettier.semi": true,
+	"prettier.tabWidth": 4,
+	"prettier.singleQuote": true,
+	"prettier.trailingComma": "all",
+	"prettier.bracketSpacing": true,
+	"prettier.endOfLine": "crlf",
+	"prettier.useTabs": true,
+	"prettier.jsxSingleQuote": true,
+	"prettier.bracketSameLine": false,
+	"prettier.arrowParens": "always",
+	"prettier.singleAttributePerLine": false,
+
+	// ================================
+	// 🐍 PYTHON CONFIGURATION
+	// ================================
+	// "python.formatting.provider": "black",
+	"python.defaultInterpreterPath": "./venv/bin/python",
+	"python.terminal.activateEnvironment": true,
+	"python.analysis.autoImportCompletions": true,
+	"python.analysis.fixAll": ["source.unusedImports"],
+	"python.linting.enabled": true,
+	"python.linting.pylintEnabled": false,
+	"python.linting.flake8Enabled": true,
+	"python.linting.mypyEnabled": true,
+	"python.testing.pytestEnabled": true,
+	"python.testing.unittestEnabled": false,
+
+	// ================================
+	// 🚀 TYPESCRIPT/JAVASCRIPT
+	// ================================
+	"typescript.updateImportsOnFileMove.enabled": "always",
+	"javascript.updateImportsOnFileMove.enabled": "always",
+	"typescript.preferences.includePackageJsonAutoImports": "auto",
+	"typescript.suggest.autoImports": true,
+	"typescript.preferences.importModuleSpecifier": "relative",
+	"javascript.preferences.importModuleSpecifier": "relative",
+	"javascript.suggest.autoImports": true,
+
+	// ================================
+	// 🗂️ EXPLORER BEHAVIOR
+	// ================================
+	"explorer.autoReveal": true,
+	"explorer.confirmDelete": false,
+	"explorer.confirmDragAndDrop": false,
+	"explorer.compactFolders": false,
+
+	// ================================
+	// 🌲 WORKBENCH TREE
+	// ================================
+	"workbench.tree.indent": 15,
+	"workbench.tree.renderIndentGuides": "always",
+
+	// ================================
+	// 🔍 ESLINT CONFIGURATION
+	// ================================
+	"eslint.enable": true,
+	"eslint.validate": [
+		"javascript",
+		"typescript",
+		"javascriptreact",
+		"typescriptreact"
+	],
+	"eslint.workingDirectories": ["."],
+	"eslint.lintTask.enable": true,
+	"eslint.problems.shortenToSingleLine": false,
+	"eslint.quiet": false,
+	"problems.decorations.enabled": true,
+
+	// ================================
+	// 🌈 BRACKET COLORIZATION
+	// ================================
+	"editor.bracketPairColorization.enabled": true,
+	"editor.guides.indentation": true,
+	"editor.guides.bracketPairs": "active",
+	"editor.guides.bracketPairsHorizontal": "active",
+	"editor.guides.highlightActiveIndentation": true,
+	"editor.guides.highlightActiveBracketPair": true,
+	"editor.language.brackets": [
+		["[", "]"],
+		["(", ")"],
+		["{", "}"]
+	],
+	"editor.language.colorizedBracketPairs": [
+		["[", "]"],
+		["(", ")"],
+		["{", "}"]
+	],
+	"workbench.colorCustomizations": {
+		"editorBracketHighlight.foreground1": "#fac928",
+		"editorBracketHighlight.foreground2": "#c122e9",
+		"editorBracketHighlight.foreground3": "#057aff",
+		"editorBracketHighlight.foreground4": "#00e74d",
+		"editorBracketHighlight.foreground5": "#f51384",
+		"editorBracketHighlight.foreground6": "#19f9d8",
+		"editorBracketPairGuide.background1": "#fac9289E",
+		"editorBracketPairGuide.background2": "#c122e99E",
+		"editorBracketPairGuide.background3": "#057aff9E",
+		"editorBracketPairGuide.background4": "#00e74d9E",
+		"editorBracketPairGuide.background5": "#f513849E",
+		"editorBracketPairGuide.background6": "#19f9d89E",
+		"editorBracketPairGuide.activeBackground1": "#FAC9289E",
+		"editorBracketPairGuide.activeBackground2": "#C122E99E",
+		"editorBracketPairGuide.activeBackground3": "#057AFF9E",
+		"editorBracketPairGuide.activeBackground4": "#00E7499E",
+		"editorBracketPairGuide.activeBackground5": "#F513849E",
+		"editorBracketPairGuide.activeBackground6": "#19F9D89E",
+		"activityBar.activeBackground": "#65c89b",
+		"activityBar.background": "#65c89b",
+		"activityBar.foreground": "#15202b",
+		"activityBar.inactiveForeground": "#15202b99",
+		"activityBarBadge.background": "#945bc4",
+		"activityBarBadge.foreground": "#e7e7e7",
+		"commandCenter.border": "#15202b99",
+		"sash.hoverBorder": "#65c89b",
+		"statusBar.background": "#42b883",
+		"statusBar.foreground": "#15202b",
+		"statusBarItem.hoverBackground": "#359268",
+		"statusBarItem.remoteBackground": "#f0e8f7",
+		"statusBarItem.remoteForeground": "#15202b",
+		"titleBar.activeBackground": "#42b883",
+		"titleBar.activeForeground": "#15202b",
+		"titleBar.inactiveBackground": "#42b88399",
+		"titleBar.inactiveForeground": "#15202b99",
+		"activityBarTop.activeBackground": "#65c89b",
+		"activityBarTop.background": "#65c89b",
+		"activityBarTop.foreground": "#15202b",
+		"activityBarTop.inactiveForeground": "#15202b99",
+		"commandCenter.foreground": "#15202b",
+		"statusBar.debuggingBackground": "#42b883",
+		"statusBar.debuggingForeground": "#15202b"
+	},
+
+	// ================================
+	// 💬 BETTER COMMENTS
+	// ================================
+	"better-comments.tags": [
+		{
+			"tag": "!",
+			"color": "#FF2D00",
+			"strikethrough": false,
+			"underline": false,
+			"backgroundColor": "transparent",
+			"bold": false,
+			"italic": false
+		},
+		{
+			"tag": "?",
+			"color": "#3498DB",
+			"strikethrough": false,
+			"underline": false,
+			"backgroundColor": "transparent",
+			"bold": false,
+			"italic": false
+		},
+		{
+			"tag": "+",
+			"color": "#FCF5C7",
+			"strikethrough": false,
+			"underline": false,
+			"backgroundColor": "transparent",
+			"bold": false,
+			"italic": false
+		},
+		{
+			"tag": "//",
+			"color": "#474747",
+			"strikethrough": true,
+			"underline": false,
+			"backgroundColor": "transparent",
+			"bold": false,
+			"italic": false
+		},
+		{
+			"tag": "@",
+			"color": "#FF8C00",
+			"strikethrough": false,
+			"underline": false,
+			"backgroundColor": "transparent",
+			"bold": false,
+			"italic": false
+		},
+		{
+			"tag": "*",
+			"color": "#98C379",
+			"strikethrough": false,
+			"underline": false,
+			"backgroundColor": "transparent",
+			"bold": false,
+			"italic": false
+		}
+	],
+
+	// ================================
+	// 🎭 MATERIAL ICON THEME
+	// ================================
+	"material-icon-theme.activeIconPack": "react",
+	"material-icon-theme.files.associations": {
+		"*.module.css": "css",
+		"*.key.ts": "Key",
+		"*.config.ts": "settings",
+		"*.config.tsx": "settings",
+		"*.config.py": "settings",
+		"config.py": "settings",
+		"*.schema.ts": "makefile",
+		"*.adapter.ts": "Diff",
+		"middleware.ts": "Mxml"
+	},
+	"material-icon-theme.folders.color": "#CDCDCD",
+	"material-icon-theme.folders.associations": {
+		"store": "global",
+		"schema": "class",
+		"types": "typescript",
+		"styles": "sass",
+		"[locale]": "views",
+		"documentation": "",
+		"review": "",
+		"settings": "",
+		"charts": "components",
+		"features": "job"
+	},
+	"material-icon-theme.folders.theme": "specific",
+
+	// ================================
+	// ⚡ IMPORT COST
+	// ================================
+	"importCost.autoHide": true,
+	"importCost.autoHideTimeout": 3000,
+	"importCost.bundles": ["webpack", "rollup"],
+	"importCost.showCalculatingDecoration": false,
+	"importCost.smallPackageSize": 50,
+	"importCost.mediumPackageSize": 100,
+
+	// ================================
+	// 🌐 LIVE SERVER
+	// ================================
+	"liveServer.settings.port": 4000,
+	"liveServer.settings.root": "/",
+	"liveServer.settings.CustomBrowser": "chrome",
+	"liveServer.settings.AdvanceCustomBrowserCmdLine": "",
+	"liveServer.settings.NoBrowser": false,
+	"liveServer.settings.ignoreFiles": [
+		".vscode/**",
+		"**/*.scss",
+		"**/*.sass",
+		"**/*.ts"
+	],
+	"liveServer.settings.donotShowInfoMsg": true,
+
+	// ================================
+	// 🦚 PEACOCK
+	// ================================
+	"peacock.favoriteColors": [
+		{
+			"name": "Angular Red",
+			"value": "#dd0531"
+		},
+		{
+			"name": "React Blue",
+			"value": "#61dafb"
+		},
+		{
+			"name": "Next.js Black",
+			"value": "#000000"
+		},
+		{
+			"name": "Vue Green",
+			"value": "#42b883"
+		},
+		{
+			"name": "FastAPI Blue",
+			"value": "#057aff"
+		},
+		{
+			"name": "PostgreSQL Green",
+			"value": "#00e74d"
+		},
+		{
+			"name": "Pink",
+			"value": "#f51384"
+		}
+	],
+	"peacock.showColorInStatusBar": true,
+	"peacock.surpriseMeOnStartup": false,
+	"peacock.affectActivityBar": true,
+	"peacock.affectStatusBar": true,
+	"peacock.affectTitleBar": true,
+
+	// ================================
+	// 🏷️ AUTO RENAME TAG
+	// ================================
+	"auto-rename-tag.activationOnLanguage": [
+		"html",
+		"xml",
+		"php",
+		"javascript",
+		"javascriptreact",
+		"typescript",
+		"typescriptreact"
+	],
+
+	// ================================
+	// 🖥️ TERMINAL
+	// ================================
+	"terminal.integrated.env.windows": {},
+
+	// ================================
+	// 🔧 EXTENSIONS SETTINGS
+	// ================================
+	"console-ninja.featureSet": "Community",
+	"diffEditor.hideUnchangedRegions.enabled": true,
+	"prisma.showPrismaDataPlatformNotification": false,
+	"github.copilot.nextEditSuggestions.enabled": false,
+
+	// ================================
+	// 🔍 FILES ASSOCIATIONS
+	// ================================
+	"files.associations": {
+		"*.py": "python",
+		"*.jsx": "javascriptreact",
+		"*.tsx": "typescriptreact",
+		"requirements.txt": "pip-requirements",
+		"Pipfile": "toml",
+		"*.env": "properties"
+	},
+
+	// ================================
+	// 🚫 FILES EXCLUDE
+	// ================================
+	"files.exclude": {
+		"**/__pycache__": true,
+		"**/.pytest_cache": true,
+		"**/node_modules": true,
+		"**/.git": true,
+		"**/.DS_Store": true,
+		"**/Thumbs.db": true,
+		"**/*.pyc": true
+	},
+	"peacock.color": "#42b883",
+	"cursorpyright.analysis.autoImportCompletions": true
+}

@@ -1,0 +1,49 @@
+@import './system.css';
+
+@font-face {
+  font-family: 'Quicksand';
+  src: url('../../../../assets/font/Quicksand.ttf');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'GoogleSans';
+  src: url('../../../../assets/font/GoogleSans.ttf');
+  font-weight: 500;
+  font-style: normal;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  min-height: 100vh;
+  color: var(--foreground);
+  /* background: var(--background); */
+  line-height: 1.6;
+  font-family: 'Quicksand', sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ── App root ── */
+.root {
+  isolation: isolate;
+}
