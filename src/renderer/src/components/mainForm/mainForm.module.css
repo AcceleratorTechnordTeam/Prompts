@@ -4,7 +4,7 @@
   flex-direction: column;
   gap: 6px;
   margin-top: 6px;
-  overflow-y: auto;
+  overflow-y: hidden;
 }
 
 .container::-webkit-scrollbar {
@@ -18,62 +18,62 @@
   border-radius: var(--radius);
 }
 
-.reset {
+.buttonGroup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 6px;
+}
+
+.topButton {
+  width: 30px;
   height: 30px;
-  flex-grow: 1;
+  flex-grow: 0;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
   padding: 0;
-
   border-radius: 8px;
   border: none;
-  background-color: var(--foreground);
-  color: var(--primary-foreground);
+  background-color: var(--destructive);
+  color: var(--destructive-foreground);
   font-family: inherit;
-
   cursor: pointer;
   transition:
     background-color 0.3s,
     box-shadow 0.15s,
-    opacity 0.15s;
-
-  &:focus-visible {
-    outline: none;
-    box-shadow: 0 0 0 3px color-mix(in oklch, var(--primary) 35%, transparent);
-  }
-
-  &:disabled {
-    opacity: 0.4;
-    cursor: not-allowed;
-  }
-
-  &:hover:not(:disabled) {
-    background-color: color-mix(in oklch, var(--success) 100%, black);
-  }
-
-  &:active:not(:disabled) {
-    background-color: color-mix(in oklch, var(--primary) 75%, black);
-  }
+    opacity 0.15s,
+    color 0.15s ease-in-out;
 }
 
-.reset {
-  width: 30px;
-  flex-grow: 0;
-  background-color: var(--destructive);
+.topButton:hover {
+  background-color: var(--card-foreground);
+}
+.topButton:active:not(:disabled) {
+  background-color: color-mix(in oklch, var(--destructive) 75%, black);
+  transform: scale(0.92);
+}
+/* 
+.topButton:hover:not(:disabled) {
+  background-color: color-mix(in oklch, var(--destructive) 85%, black);
   color: var(--destructive-foreground);
 }
 
-.reset {
-  &:hover:not(:disabled) {
-    background-color: color-mix(in oklch, var(--destructive) 85%, black);
-  }
-
-  &:active:not(:disabled) {
-    background-color: color-mix(in oklch, var(--destructive) 75%, black);
-  }
+.topButton:active:not(:disabled) {
+  background-color: color-mix(in oklch, var(--destructive) 75%, black);
 }
+
+.topButton:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.topButton:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px color-mix(in oklch, var(--primary) 35%, transparent);
+} */
 
 .Loader {
   animation: spin 1s linear infinite;

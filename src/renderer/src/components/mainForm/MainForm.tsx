@@ -1,6 +1,6 @@
 import { Button } from '@base-ui/react'
 import { zodResolver } from '@hookform/resolvers/zod'
-import { Loader, RotateCcw } from 'lucide-react'
+import { Copy, Loader, Trash } from 'lucide-react'
 import { Controller, useForm } from 'react-hook-form'
 import { NavLink } from 'react-router'
 import { useLlms } from '../../api/llms.api'
@@ -9,6 +9,16 @@ import { ComboBox } from '../ui/comboBox/ComboBox'
 import { TextArea } from '../ui/textArea/TextArea'
 import styles from './mainForm.module.css'
 import { FormValues, mainFormSchema } from './mainForm.schema'
+
+const STORAGE_KEY = 'mainForm'
+
+const getSavedValues = (): FormValues => {
+  try {
+    return JSON.parse(sessionStorage.getItem(STORAGE_KEY) ?? '')
+  } catch {
+    return { systemePrompt: '', userPrompt: '', models: [] }
+  }
+}
 
 type MainFormProps = {
   isLoading: boolean
@@ -29,16 +39,15 @@ export const MainForm = ({
     handleSubmit,
     control,
     setValue,
+    watch,
     formState: { errors, isValid, isDirty }
   } = useForm<FormValues>({
     resolver: zodResolver(mainFormSchema),
     mode: 'onChange',
-    defaultValues: {
-      systemePrompt: '',
-      userPrompt: '',
-      models: []
-    }
+    defaultValues: getSavedValues()
   })
+
+  sessionStorage.setItem(STORAGE_KEY, JSON.stringify(watch()))
 
   const onSubmit = (data: FormValues) => {
     if (isValid) {
@@ -49,12 +58,16 @@ export const MainForm = ({
     }
   }
 
-  const handleResetSystemPrompt = () => {
-    setValue('systemePrompt', '', { shouldDirty: true, shouldValidate: true })
+  const handleResetValue = (id: 'systemePrompt' | 'userPrompt') => {
+    setValue(id, '', { shouldDirty: true, shouldValidate: true })
   }
 
-  const handleResetUserPrompt = () => {
-    setValue('userPrompt', '', { shouldDirty: true, shouldValidate: true })
+  const copyToClipboard = async (value: string) => {
+    try {
+      await navigator.clipboard.writeText(value)
+    } catch {
+      console.error('Failed to copy text to clipboard')
+    }
   }
 
   return (
@@ -80,14 +93,23 @@ export const MainForm = ({
       <Card
         label="System prompt"
         button={
-          <Button
-            className={styles.reset}
-            type="button"
-            onClick={handleResetSystemPrompt}
-            disabled={isLoading || (!isDirty && !isValid)}
-          >
-            <RotateCcw size={18} />
-          </Button>
+          <span className={styles.buttonGroup}>
+            <Button
+              className={styles.topButton}
+              type="button"
+              onClick={() => copyToClipboard(watch('systemePrompt'))}
+            >
+              <Copy size={18} />
+            </Button>
+            <Button
+              className={styles.topButton}
+              type="button"
+              onClick={() => handleResetValue('systemePrompt')}
+              disabled={isLoading || (!isDirty && !isValid)}
+            >
+              <Trash size={18} />
+            </Button>
+          </span>
         }
       >
         <Controller
@@ -109,14 +131,23 @@ export const MainForm = ({
       <Card
         label="User Prompt"
         button={
-          <Button
-            className={styles.reset}
-            type="button"
-            onClick={handleResetUserPrompt}
-            disabled={isLoading || (!isDirty && !isValid)}
-          >
-            <RotateCcw size={18} />
-          </Button>
+          <span className={styles.buttonGroup}>
+            <Button
+              className={styles.topButton}
+              type="button"
+              onClick={() => copyToClipboard(watch('userPrompt'))}
+            >
+              <Copy size={18} />
+            </Button>
+            <Button
+              className={styles.topButton}
+              type="button"
+              onClick={() => handleResetValue('userPrompt')}
+              disabled={isLoading || (!isDirty && !isValid)}
+            >
+              <Trash size={18} />
+            </Button>
+          </span>
         }
       >
         <Controller
