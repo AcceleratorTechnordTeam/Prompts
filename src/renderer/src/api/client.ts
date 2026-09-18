@@ -29,7 +29,7 @@ const get = <T>(url: string): Promise<T> =>
   }).then((r) => r.json())
 
 const post = <T>(url: string, body: unknown): Promise<T> =>
-  fetchWithTimeout(url, 120000, {
+  fetchWithTimeout(url, 600000, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(body)

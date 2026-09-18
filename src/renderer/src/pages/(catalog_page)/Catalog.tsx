@@ -12,6 +12,7 @@ import styles from './catalog.module.css'
 
 export const Catalog = () => {
   const { content } = useLlms()
+  console.log('content', content)
   const [modelId, setModelId] = useState<string>('')
   const [openDrawer, setOpenDrawer] = useState(false)
   const mergedCatalog = mergeOllamaModels(ollamaCatalog, content)

@@ -34,6 +34,7 @@ export const MainForm = ({
   onSubmitForm
 }: MainFormProps) => {
   const { llms } = useLlms()
+  console.log('llms', llms)
 
   const {
     handleSubmit,
