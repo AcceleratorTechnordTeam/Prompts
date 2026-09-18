@@ -13,14 +13,20 @@ export const TopBar = () => {
       <div className={styles.title}>{pageName}</div>
 
       <div className={styles.wrapper}>
-        <NavLink to="/" data-hidden={url === '/'} className={styles.link}>
-          <span className={styles.navLink}>Tester</span>
+        <NavLink to="/" className={styles.link}>
+          <span className={styles.navLink} data-hidden={url === '/'}>
+            Tester
+          </span>
         </NavLink>
-        <NavLink to="/catalog" data-hidden={url === '/catalog'} className={styles.link}>
-          <span className={styles.navLink}>catalog</span>
+        <NavLink to="/catalog" className={styles.link}>
+          <span className={styles.navLink} data-hidden={url === '/catalog'}>
+            catalog
+          </span>
         </NavLink>
-        <NavLink to="/history" data-hidden={url === '/history'} className={styles.link}>
-          <span className={styles.navLink}>History</span>
+        <NavLink to="/history" className={styles.link}>
+          <span className={styles.navLink} data-hidden={url === '/history'}>
+            History
+          </span>
         </NavLink>
         <span className={styles.separator} />
         <button onClick={handleMinimize} className={styles.reduceItem} />

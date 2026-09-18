@@ -46,8 +46,10 @@
   color: var(--accent);
 }
 
-.link[data-hidden='true'] {
-  display: none;
+.navLink[data-hidden='true'] {
+  color: var(--text-disabled);
+  text-decoration: none;
+  cursor: default;
 }
 
 .separator {
